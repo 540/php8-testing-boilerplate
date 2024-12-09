@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Deg540\PHPTestingBoilerplate\Test;
 
 use Deg540\PHPTestingBoilerplate\Calculator;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 final class CalculatorTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[Test]
     public function shouldAddTwoArguments()
     {
         $calculator = new Calculator();
@@ -21,9 +20,7 @@ final class CalculatorTest extends TestCase
         $this->assertEquals(3, $result);
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function shouldMultiplyTwoArguments()
     {
         $calculator = new Calculator();
